@@ -1,1 +1,60 @@
+.logo-animated {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 5.5rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  color: transparent;
+  background: none;
+  -webkit-text-stroke: 3px #2d72d9;
+  text-stroke: 3px #2d72d9;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 18px;
+  text-shadow: 0 4px 24px rgba(45,114,217,0.18), 0 1px 0 #fff;
+  filter: drop-shadow(0 2px 12px #2d72d9aa);
+  animation: pop-in 1.2s cubic-bezier(.68,-0.55,.27,1.55) 1;
+}
 
+.logo-animated::after {
+  content: 'Jobify';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: linear-gradient(90deg, #2d72d9 10%, #00c6fb 50%, #2d72d9 90%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  z-index: 1;
+  animation: shine-move 2.5s linear infinite;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+@keyframes shine-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0.7) rotate(-8deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15) rotate(2deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
