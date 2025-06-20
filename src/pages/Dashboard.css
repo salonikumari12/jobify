@@ -1,0 +1,70 @@
+.jobs-table-container {
+  margin: 0 auto;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+}
+
+.jobs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.jobs-table th, .jobs-table td {
+  border: 1px solid #e0e0e0;
+  padding: 12px 10px;
+  text-align: left;
+}
+
+.jobs-table th {
+  background: #f7f7f7;
+  color: #333;
+  font-weight: 600;
+}
+
+.jobs-table tr:nth-child(even) {
+  background: #fafbfc;
+}
+
+.jobs-table tr:hover {
+  background: #e6f7ff;
+  transition: background 0.2s;
+}
+
+.jobs-table .job-id {
+  color: #888;
+  font-weight: 500;
+}
+
+.jobs-table .job-title {
+  color: #2d72d9;
+  font-weight: 500;
+}
+
+.jobs-table .job-status {
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 4px 10px;
+  display: inline-block;
+}
+
+.jobs-table .job-status.Applied {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+.jobs-table .job-status[status="Interview Scheduled"] {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+.jobs-table .job-status[status="Offer Received"] {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+.jobs-table .job-status[status="Rejected"] {
+  background: #ffebee;
+  color: #d32f2f;
+}
